@@ -61,7 +61,7 @@ router.put("/:id", async (req, res) => {
     const updatedAccount = await accountsDb("accounts")
       .where({ id: id })
       .update(req.body);
-    res.status(200).json({ message: `${updatedAccount} recod(s) updated` });
+    res.status(200).json({ message: `${updatedAccount} record(s) updated` });
   } catch (err) {
     res.status(500).json(err);
   }
